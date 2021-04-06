@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>View Emp</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+     
+
+.btn-blue {
+    background-color: #abe9cd; 
+    background:linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+    margin-top: 50px;
+    padding: 10px 50px;
+    border: 2px solid #44c5ee;
+    color: rgb(0, 0, 0);
+    border-radius: 50px;
+    font-size: 25px;
+    letter-spacing: 0.08em;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+    box-shadow: 0px 0px 60px 0px rgba(68, 197, 238, 0.6);
+    outline: none !important
+}
+  .main {
+        background-color: #FFFFFF;
+        width: 400px;
+        height: 400px;
+        margin: 7em auto;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    }
+
+
+    body {
+        background-image: url("a2.png");
+        /* background-size: 100%;       */
+        background-position: top;
+        background-color:  rgb(255, 255, 255);
+        background-repeat:no-repeat;
+      }
+      .drop-shadow {
+        -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+      }
+    .container {
+        margin-top: 30px;
+        padding-left:0;
+        padding-right:0;
+    }
+    .rounded {
+    border-radius:.25rem!important
+    }
+    </style>
+    <script type="text/javascript">
+    	document.getElementById("empid").setAttribute("autocomplete","off");
+    </script>
+  </head>
+  <body>
+    
+    <div class="container d-flex justify-content-center">
+
+      <img src="https://1000logos.net/wp-content/uploads/2020/09/EMS-Logo.png" width="300"  height="200" alt="Brand LOGO" class="mx-auto d-block mt-1">
+
+
+      <div class="container drop-shadow col-md-5 rounded bg-dark">
+	      <div class="row">
+	        <div class="ml-3 mr-3 mb-3 mt-3 mx-auto" style="width: 450px;">
+	          <div class="card card-signin bg-light text-dark" style="background-color: #FFFAF0;">
+	          
+	              <div class="card-title text-center" style="background-color: #abe9cd; background:linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);">
+	              		<h3 style="font-family: Playfair Display; padding: 20px;">View Employee Records</h3>
+	              </div> 
+	      
+		          <div class="main col-md col-md-offset-1">
+		            <form class="signup-form" action="Emp_view">
+		                <div class="form-group"> 
+		                  <input type="text" autocomplete="off" class="form-control btn-blue" placeholder="Empolyee Id" id="empid" name="id" required="required">
+		                </div>
+		
+		                <div class="form-group text-center"> 
+		                  <button type="submit" class="btn btn-blue btn-block">VIEW</button> 
+		                </div>
+		            </form>
+		          </div>
+	    		</div>
+	  		  </div>
+	  		</div>
+  		</div>
+  	</div>
+    
+  </body>
+</html>

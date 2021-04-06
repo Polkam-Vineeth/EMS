@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Admin SignUP</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <style>
+      input,textarea {
+        font-family: FontAwesome;
+      }
+      body {
+        background-image: url("AdminsRoom.png");
+        background-size: 1600px;      
+        background-position: top;
+        background-color: rgb(253, 252, 252);
+        background-repeat:no-repeat;
+      }
+      .drop-shadow {
+        -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+    }
+    .container.drop-shadow {
+        padding-left:0;
+        padding-right:0;
+    }
+    .rounded {
+    border-radius:.25rem!important
+    }
+    </style>
+    <script>
+
+      function formcheck(form) { 
+                var newUser = document.getElementById('user').value;
+                user1 = form.user.value;
+                password1 = form.password.value; 
+                password2 = form.confirm_password.value; 
+                var minNumberofChars = 8;
+                var zero = 0;
+                if(newUser.length < minNumberofChars){
+                    alert("User should contain atleast 8 characters");
+                    return false;
+                }
+                else if (user1 == '') {
+                    alert ("Username must not be empty.");
+                    return false;
+                }
+                // If password not entered 
+                else if (password1.length < minNumberofChars) {
+                    alert ("Password should contain atleast 8 characters"); 
+                    return false;
+                }
+                // If confirm password not entered 
+                else if (password2.length < minNumberofChars) { 
+                    alert ("Confirm Password should contain atleast 8 characters"); 
+                    return false;
+                } 
+                // If Not same return False.     
+                else if (password1 != password2) { 
+                    alert ("\nPassword and confirm password should be equal: Please try again..."); 
+                    return false; 
+                } 
+  
+                // If same return True. 
+                else{ 
+                    alert("Password Match: Welcome!");
+                    return true; 
+                } 
+            } 
+    </script>
+  </head>
+<body>
+
+
+  <div class="container">
+    <img src="https://1000logos.net/wp-content/uploads/2020/09/EMS-Logo.png" width="150"  height="100" alt="Brand LOGO" class="mx-auto d-block mt-1">
+    <div class="container drop-shadow col-md-5 rounded bg-dark">
+    <div class="row">
+      <div class="ml-3 mr-3 mb-3 mt-3 mx-auto" style="width: 450px;">
+        <div class="card card-signin bg-light text-drak" style="background-color: #FFFAF0;">
+          <div class="card-title text-center text-uppercase " style="background-color: #abe9cd; background:linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);">
+            
+            <h3 style="font-family: Playfair Display; padding: 20px;">Create Admin Account</h3>
+          </div>
+          <div class="card-body">
+            <form class="form-signin" action="Admin_signup" onSubmit = "return formcheck(this)">
+              
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" name="name" 
+                  placeholder="&#xf2bd; Your Name" required="required">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" name="uname" 
+                  placeholder="&#xf2bd; User Name" id="user" >
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="email" class="form-control" name="email" placeholder="&#xf0e0;  Your E-mail Address" required="required">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col">
+                    <input type="password" class="form-control" name="pswd1" id="psw" placeholder="&#xf023;Password" required="Required">
+                  </div>
+                  <div class="col">
+                    <input type="password" class="form-control" name="confirm_password" placeholder="&#xf084;Confirm Password" required="required">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group text-left">
+                <label class="checkbox-inline"><input type="checkbox" required="required"> I agree with the <a href="#">Terms</a> &amp; <a href="#">Conditions</a>.</label>
+              </div>
+
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-info btn-block text-uppercase" onclick="validate()">Sign Up</button>
+              </div>
+                    
+
+              <hr>
+              <div class="text-center">Already have an account? <a href="AdminLogin.html">Login here</a></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
